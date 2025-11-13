@@ -10,8 +10,8 @@ In addition, grok and OpenAI keys must be set as environment variables as XAI_AP
 <br>
 I would also recommend downscaling the images using ffmpeg to reduce API token use and upload time.
 <br>
-<b>That being said, since the labels acquired from these models themselves are already stored in this repository, this step is not necessarily needed in order to run the EM algorithm itself.
-in order to execute the EM algorithm and produce the project deliverables, one must simply execute</b>
+<b>That being said, since the labels acquired from these models, along with the ReaL labels are already stored in this repository, this step is not needed in order to run the EM algorithm itself.</b>
+in order to execute the EM algorithm and produce the project deliverables, one must simply execute
 ```
 python3 main.py
 ```
@@ -19,4 +19,4 @@ on a machine (or virtual environment) with matplotlib installed via
 ```
 pip3 install matplotlib
 ```
-This will print the various metrics that were taken and also produce graphs and confusion matrices in ./results/
+This will print the various metrics that were taken and also produce graphs and confusion matrices and labeled image filenames in ./results/
