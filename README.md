@@ -2,7 +2,7 @@
 
 The EM algorithm implemented over a subset of ImageNet using the ImageNet-ReaL labels as ground truth for performance analysis
 
-This repository needs all the images from ILSVRC2012_img_val.tar to be placed in assets/images/ in order to execute classify_images.py and classify_images_grok.py. You can sign up for access here. https://www.image-net.org/
+This repository needs all the images from ILSVRC2012_img_val.tar to be placed in assets/images/ in order to execute classify_images.py and classify_images_grok.py. (These are the scripts used to obtain classification labels from the LLMs) You can sign up for access here. https://www.image-net.org/
 <br>
 In addition, this folder needs to be hosted over an https server and the URL contained in classify_images.py and classify_images_grok.py replaced with the URL they are hosted at so that this URL can be given to grok and OpenAI's LLM models so that they can download the images.
 <br>
