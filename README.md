@@ -8,8 +8,8 @@ In addition, this folder needs to be hosted over an https server and the URL con
 <br>
 In addition, grok and OpenAI keys must be set as environment variables as XAI_API_KEY and OPENAI_API_KEY respectively. Overall the process of generating this data cost about $30 in AI tokens more or less.
 <br>
-That being said, since the labels acquired from these models themselves are already stored in this repository, this step is not necessarily needed in order to run the EM algorithm itself.
-in order to execute the EM algorithm and produce the project deliverables, one must simply execute 
+<b>That being said, since the labels acquired from these models themselves are already stored in this repository, this step is not necessarily needed in order to run the EM algorithm itself.
+in order to execute the EM algorithm and produce the project deliverables, one must simply execute</b>
 ```
 python3 main.py
 ```
