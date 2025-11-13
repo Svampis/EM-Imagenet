@@ -17,4 +17,4 @@ on a machine with matplotlib installed via
 ```
 pip3 install matplotlib
 ```
- 
+This will print the various metrics that were taken and also produce graphs and confusion matrices in ./results/
