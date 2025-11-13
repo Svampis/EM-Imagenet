@@ -15,7 +15,7 @@ in order to execute the EM algorithm and produce the project deliverables, one m
 ```
 python3 main.py
 ```
-on a machine with matplotlib installed via
+on a machine (or virtual environment) with matplotlib installed via
 ```
 pip3 install matplotlib
 ```
