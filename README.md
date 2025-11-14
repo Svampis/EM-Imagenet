@@ -20,7 +20,7 @@ pip3 install matplotlib
 This requires no extra steps. This will print the various metrics that were taken and also produce graphs and confusion matrices and labeled image filenames in ./results/
 
 ## Data collection instructions
-This repository needs all the images from ILSVRC2012_img_val.tar to be placed in assets/images/ in order to execute classify_images.py and classify_images_grok.py. (These are the scripts used to obtain classification labels from the LLMs) You can sign up for access here. https://www.image-net.org/
+This repository needs all the images from ILSVRC2012_img_val.tar to be placed in assets/images/ in order to execute classify_images.py and classify_images_grok.py. (These are the scripts used to obtain classification labels from the LLMs) You can sign up for access for non-commercial use here. https://www.image-net.org/
 <br>
 In addition, grok and OpenAI keys must be set as environment variables as XAI_API_KEY and OPENAI_API_KEY respectively. Overall the process of generating this data cost about $30 in AI tokens more or less.
 <br>
