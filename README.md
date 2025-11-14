@@ -32,7 +32,7 @@ to start classifying images. For grok, we only use 1 model so it is hardcoded in
 ```
 python3 classify_images_grok.py ./assets/image_names.txt [output_file_name]
 ```
-After this, the output of these programs must be further processed by convert_to_json.py, which puts them into a json format with the numerical class designations replaced with class names.
+After this, the output of these programs must be further processed by convert_to_json.py, which puts them into a json format with the numerical class designations replaced with class names. It is necessary for this to be broken into two stages because classify_images.py and classify_images_grok.py write to the output files in append mode, adding 1 line per classification, allowing for pausing and resuming of the label gathering task.
 Overall, the process to acquire the data from the LLMs is
 ```
 # Obtain labels from LLM models (warning, costs about $30)
