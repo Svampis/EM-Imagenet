@@ -1,5 +1,7 @@
 from openai import OpenAI
 import sys
+import base64
+
 client = OpenAI()
 
 classes = """
@@ -55,13 +57,15 @@ classes = """
 49: snorkel
 """
 
-
 paths = open(sys.argv[1])
 
 i = 0
 for fpath in paths:
-    # Replace this with the URL of wherever you're hosting the images
-    image_url = "http://thinkcenter.ddns.me/" + fpath
+    fpath = "./assets/images/" + fpath.strip()
+
+    with open(fpath, "rb") as imgfile:
+        img_b64 = base64.b64encode(imgfile.read()).decode("utf-8")
+
     while True:
         try:
             response = client.responses.create(
@@ -72,9 +76,15 @@ for fpath in paths:
                         "content": [
                             {
                                 "type": "input_text",
-                                "text": ("Classify the image onto one of the following categories. Provide the number only, no other text. Just make a best guess if nothing matches and dont add extraneous output to the guess. Always make guess within the range. do not break the output format ever. If nothing seems to match whatsoever, just guess something within range\n" + classes)
+                                "text": (
+                                    "Classify the image onto one of the following categories. "
+                                    "Provide the number only, no other text. "
+                                    "Just make a best guess if nothing matches and don't add extraneous output. "
+                                    "Always guess within the range. "
+                                    "If nothing matches whatsoever, just guess something in range.\n" + classes
+                                )
                             },
-                            {"type": "input_image", "image_url": image_url}
+                            {"type": "input_image", "image_url": f"data:image/jpeg;base64,{img_b64}"}
                         ]
                     }
                 ]
@@ -82,9 +92,10 @@ for fpath in paths:
             break
         except Exception as e:
             print(e)
-    fileout = open(sys.argv[2], "a")
-    print(fpath.strip() + ";" + response.output_text, file=fileout)
-    fileout.close()
+
+    with open(sys.argv[2], "a") as fileout:
+        print(fpath + ";" + response.output_text, file=fileout)
+
     print(i, file=sys.stderr)
     i += 1
 

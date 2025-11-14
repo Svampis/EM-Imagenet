@@ -64,14 +64,15 @@ paths = open(sys.argv[1])
 i = 0
 
 for fpath in paths:
-    # Replace this with the URL of wherever you're hosting the images
-    image_url = "https://thinkcenter.ddns.me/" + fpath
+    image_url = "./assets/images/" + fpath.strip()
+    with open(image_url, "rb") as imgfile:
+        img_b64 = base64.b64encode(imgfile.read()).decode("utf-8")
 
     chat = client.chat.create(model="grok-2-vision-1212")
     chat.append(
         user(
             "Classify this image as one of the following. Print only the number, provide no other text, always stick to a number even if it's a guess\n" + classes,
-            image(image_url=image_url, detail="low"),
+            image(image_url=f"data:image/jpeg;base64,{img_b64}", detail="low"),
         )
     )
 
