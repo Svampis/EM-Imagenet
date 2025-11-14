@@ -17,11 +17,15 @@ python3 classify_images_grok.py ./assets/image_names.txt [output_file_name]
 <br>
 <b>That being said, since the labels acquired from these models themselves are already stored in this repository, this step is not necessarily needed in order to run the EM algorithm itself.
 in order to execute the EM algorithm and produce the project deliverables, one must simply execute</b>
+
 ```
 python3 main.py
 ```
+
 on a machine (or virtual environment) with matplotlib installed via
+
 ```
 pip3 install matplotlib
 ```
+
 This will print the various metrics that were taken and also produce graphs and confusion matrices and labeled image filenames in ./results/
