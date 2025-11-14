@@ -3,8 +3,8 @@
 The EM algorithm implemented over a subset of ImageNet using the ImageNet-ReaL labels as ground truth for performance analysis
 
 ## EM Execution instructions
-<b>Since the labels acquired from the LLM models themselves are already stored in this repository, it is possible to execute the EM algorithm without the actual dataset and without collecting labels from the LLM models
-in order to execute the EM algorithm and produce the project deliverables, one must simply execute</b>
+<b>Since the ReaL labels and the labels acquired from the LLM models themselves are already stored in this repository, it is possible to execute the EM algorithm without the actual dataset and without collecting labels from the LLM models</b>
+in order to execute the EM algorithm and produce the project deliverables, one must simply execute
 
 ```
 python3 main.py
