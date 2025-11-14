@@ -3,7 +3,7 @@
 The EM algorithm implemented over a subset of ImageNet using the ImageNet-ReaL labels as ground truth for performance analysis
 
 ## EM Execution instructions
-<b>Since the ReaL labels and the labels acquired from the LLM models themselves are already stored in this repository, it is possible to execute the EM algorithm without the actual ImageNet image files and without collecting labels from the LLM models</b>
+<b>Since the ReaL labels and the labels acquired from the LLM models themselves are already stored in this repository, it is possible to execute the EM algorithm without the actual ImageNet image files and without re-collecting labels from the LLM models</b>
 <br>
 in order to execute the EM algorithm and produce the project deliverables, one must simply execute
 
@@ -17,7 +17,7 @@ on a machine (or virtual environment) with matplotlib installed via
 pip3 install matplotlib
 ```
 
-This will print the various metrics that were taken and also produce graphs and confusion matrices and labeled image filenames in ./results/
+This requires no extra steps. This will print the various metrics that were taken and also produce graphs and confusion matrices and labeled image filenames in ./results/
 
 ## Data collection instructions
 This repository needs all the images from ILSVRC2012_img_val.tar to be placed in assets/images/ in order to execute classify_images.py and classify_images_grok.py. (These are the scripts used to obtain classification labels from the LLMs) You can sign up for access here. https://www.image-net.org/
