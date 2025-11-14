@@ -4,7 +4,7 @@ The EM algorithm implemented over a subset of ImageNet using the ImageNet-ReaL l
 
 This repository needs all the images from ILSVRC2012_img_val.tar to be placed in assets/images/ in order to execute classify_images.py and classify_images_grok.py. (These are the scripts used to obtain classification labels from the LLMs) You can sign up for access here. https://www.image-net.org/
 <br>
-In addition, this folder needs to be hosted over an https server and the URL contained in classify_images.py and classify_images_grok.py replaced with the URL they are hosted at so that this URL can be given to grok and OpenAI's LLM models so that they can download the images.
+In addition, this folder needs to be hosted over an https server and the URL contained in classify_images.py and classify_images_grok.py replaced with the URL they are hosted at so that this URL can be given to grok and OpenAI's LLM models so that they can download the images. I would recommend configuring this https server to only allow incommung connections from OpenAI and Grok.
 <br>
 In addition, grok and OpenAI keys must be set as environment variables as XAI_API_KEY and OPENAI_API_KEY respectively. Overall the process of generating this data cost about $30 in API tokens more or less.
 <br>
