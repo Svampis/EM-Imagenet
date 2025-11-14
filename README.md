@@ -42,10 +42,10 @@ python3 classify_images.py ./assets/image_names.txt ./llm_classifications/gpt4o_
 python3 classify_images_grok.py ./assets/image_names.txt  ./llm_classifications/grok2_classifications.txt
 
 # Convert labels to json format
-python3 convert_to_json ./llm_classifications/gpt41mini_classifications.txt > ./llm_classifications/gpt41mini_classifications.json
-python3 convert_to_json ./llm_classifications/gpt41nano_classifications.txt > ./llm_classifications/gpt41nano_classifications.json
-python3 convert_to_json ./llm_classifications/gpt4o_classifications.txt > ./llm_classifications/gpt4o_classifications.json
-python3 convert_to_json ./llm_classifications/grok2_classifications.txt > ./llm_classifications/grok2_classifications.json
+python3 convert_to_json.py ./llm_classifications/gpt41mini_classifications.txt > ./llm_classifications/gpt41mini_classifications.json
+python3 convert_to_json.py ./llm_classifications/gpt41nano_classifications.txt > ./llm_classifications/gpt41nano_classifications.json
+python3 convert_to_json.py ./llm_classifications/gpt4o_classifications.txt > ./llm_classifications/gpt4o_classifications.json
+python3 convert_to_json.py ./llm_classifications/grok2_classifications.txt > ./llm_classifications/grok2_classifications.json
 ```
 <br>
 
